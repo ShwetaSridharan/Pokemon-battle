@@ -1,0 +1,77 @@
+.pokemon-battle-app {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.battle-arena {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.battle-controls {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.battle-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.battle-button:hover {
+  background-color: #45a049;
+}
+
+/* Blast animation */
+@keyframes blast {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.blast-animation {
+  position: relative;
+  animation: blast 0.5s ease-in-out;
+}
+
+.battle-log {
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+.loading, .error {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 50px;
+}
+
+.error {
+  color: #ff0000;
+}
